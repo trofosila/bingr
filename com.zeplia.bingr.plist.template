@@ -7,7 +7,7 @@
 		<key>ProgramArguments</key>
 		<array>
 			<string>/bin/bash</string>
-			<string>/Users/trofo/Scripts/bingr/bingr.sh</string>
+			<string>/Users/USERNAME/Scripts/bingr/bingr.sh</string>
 		</array>
 		<key>LowPriorityIO</key>
 		<true/>
