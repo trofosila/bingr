@@ -10,8 +10,11 @@ IMG_URL=$(curl --silent $URL | \
     grep -Eo "\"url\":\".*?\"" |\
     rev | cut -c 2- | rev |\
     cut -c 8-) #select, cut ending ", cut trailing "url":"
+echo Image URL: $IMG_URL
 
-IMG_NAME="${IMG_URL##*/}" #select everything after last occurence of /
+IMG_NAME="${IMG_URL#*=}" #select everything after first occurence of =
+IMG_NAME="${IMG_NAME%%&*}"  #select everything before first occurence of &
+echo Image filename: $IMG_NAME
 
 if [ ! -f "$SAVE_PATH/$IMG_NAME" ]; then
     echo "Saving $IMG_NAME..."
