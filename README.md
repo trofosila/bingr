@@ -23,7 +23,7 @@ Alternatively, this script is equivalent to the steps listed above:
 sed -i .bak "s/USERNAME/$USER/g" com.zeplia.bingr.plist.template
 mv com.zeplia.bingr.plist.template ~/Library/LaunchAgents/com.zeplia.bingr.plist
 mv com.zeplia.bingr.plist.template.bak com.zeplia.bingr.plist.template
-launchctl start ~/Library/LaunchAgents/com.zeplia.bingr.plist
+launchctl load ~/Library/LaunchAgents/com.zeplia.bingr.plist
 launchctl start com.zeplia.bingr
 ```
 
