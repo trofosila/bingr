@@ -26,7 +26,7 @@ launchctl load ~/Library/LaunchAgents/com.zeplia.bingr.plist
 ```
 
 ## Uninstall
-To uninstall run this command:
+To uninstall run this script:
 ```bash
 launchctl unload ~/Library/LaunchAgents/com.zeplia.bingr.plist
 rm ~/Library/LaunchAgents/com.zeplia.bingr.plist
