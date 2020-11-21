@@ -1,4 +1,4 @@
-# Bing wallpaper for macOS
+# Bing Wallpaper for macOS
 
 ## Getting the script
 ```bash
@@ -17,9 +17,17 @@ Running `./bingr.sh` will download *Bing image of the day* to `~/Pictures/bingr/
 - copy `com.zeplia.bingr.plist` to `~/Library/LaunchAgents`
 - run the terminal command `launchctl load ~/Library/LaunchAgents/com.zeplia.bingr.plist`
 
-Alternatively, use this one-liner script
-```
-sed -i .bak "s/USERNAME/$USER/g" com.zeplia.bingr.plist.template && mv com.zeplia.bingr.plist.template ~/Library/LaunchAgents/com.zeplia.bingr.plist && mv com.zeplia.bingr.plist.template.bak com.zeplia.bingr.plist.template
+Alternatively, this script is equivalent to the steps listed above:
+```bash
+sed -i .bak "s/USERNAME/$USER/g" com.zeplia.bingr.plist.template
+mv com.zeplia.bingr.plist.template ~/Library/LaunchAgents/com.zeplia.bingr.plist
+mv com.zeplia.bingr.plist.template.bak com.zeplia.bingr.plist.template
+launchctl load ~/Library/LaunchAgents/com.zeplia.bingr.plist
 ```
 
 ## Uninstall
+To uninstall run this command:
+```bash
+launchctl unload ~/Library/LaunchAgents/com.zeplia.bingr.plist
+rm ~/Library/LaunchAgents/com.zeplia.bingr.plist
+```
